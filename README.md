@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/logo.png" alt="ShopRefresh logo" width="128"></p>
+
 # ShopRefresh
 
 **Automated Secret Shop refreshes for Epic Seven on Windows.**
@@ -17,18 +19,20 @@ Get the latest **`ShopRefresh-vX.Y.exe`** from the [Releases page](https://githu
 Each release lists a SHA-256 checksum, a fingerprint of the exact file that was published. To confirm your copy is genuine and complete, run this in PowerShell from the download folder and compare the result with the checksum on the release page:
 
 ```powershell
-Get-FileHash .\ShopRefresh-v0.5.exe -Algorithm SHA256
+Get-FileHash .\ShopRefresh-v0.6.exe -Algorithm SHA256
 ```
 
-You can also run `ShopRefresh-v0.5.exe --self-test`, which checks the app without touching the game and writes `selftest.txt` ending in `PASS`.
+You can also run `ShopRefresh-v0.6.exe --self-test`, which checks the app without touching the game and writes `selftest.txt` ending in `PASS`.
 
 ## Updating
 
-From v0.6 onward, the app shows a banner when a new version is available, with **Download**, **What's new**, and **Skip**. Put the new exe in the **same folder** as the old one and run it. Your `settings.json` and `lifetime_stats.json` live in that folder, so they carry over. Then delete the old exe.
+From v0.6 onward, the app updates itself. When a new version is available, a banner appears with **Update**, **What's new**, and **Skip**. **Update** downloads the new exe next to the old one, checks its size and SHA-256 against the release, and restarts into it. Your `settings.json` and `lifetime_stats.json` carry over, and the old exe is tidied up on the next launch.
+
+**Coming from v0.5 or earlier?** Download v0.6 by hand once, put it in the **same folder** as the old exe, run it, then delete the old exe.
 
 ## Privacy
 
-ShopRefresh stores its settings and statistics as plain files next to the exe. It stores no passwords or account details. Its only network request is an optional update check against this repository's releases, which can be turned off in Settings.
+ShopRefresh stores its settings and statistics as plain files next to the exe. It stores no passwords or account details. Its only network requests are an optional update check against this repository's releases, which can be turned off in Settings, and the exe download when you press **Update**.
 
 ## Disclaimer
 
