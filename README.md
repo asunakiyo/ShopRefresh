@@ -70,17 +70,11 @@ You can also run `ShopRefresh-v1.0.1.exe --self-test`, which checks the app with
 
 ## Updating
 
-From v0.6 onward, the app updates itself. When a new version is available, a notice appears with **Update**, **What's new**, and **Skip**, both on the start screen and at the top of the app. **Update** downloads the new exe next to the old one, checks its size and SHA-256 against the release, and restarts into it. Your `settings.json` and `lifetime_stats.json` carry over, and the old exe is tidied up on the next launch.
-
-**Coming from v0.5 or earlier?** Download the latest version by hand once, put it in the **same folder** as the old exe, run it, then delete the old exe.
+The app updates itself. When a new version is available, a notice appears with **Update**, **What's new**, and **Skip**, both on the start screen and at the top of the app. **Update** downloads the new exe next to the old one, checks its size and SHA-256 against the release, and restarts into it. Your `settings.json` and `lifetime_stats.json` carry over, and the old exe is tidied up on the next launch.
 
 ## Privacy
 
 ShopRefresh stores its settings and statistics as plain files next to the exe. It stores no passwords or account details. Its only network requests are an optional update check against this repository's releases, which can be turned off in Settings, and the exe download when you press **Update**.
-
-## If something goes wrong
-
-If the app hits an unexpected error, it stops safely and offers **Copy error report**. The report has your Windows user name and home folder removed. Keep it handy if you ask someone for help.
 
 ## Disclaimer
 
