@@ -23,7 +23,7 @@ This repository hosts the official Windows releases. **[Download the latest vers
 ### You stay in control
 - **Auto-stop limits:** set a gold floor and a skystone floor (defaults 1,000,000 and 1,000) and the run stops before you drop below them.
 - **F8 emergency stop**, even while the game has focus.
-- **Pauses when you move the mouse:** nothing is clicked while you use it. A **Shop paused** card counts down 5 seconds once the mouse is still, then the bot checks the shop and starts again from the top. It also works in the mini view.
+- **Pauses when you move the mouse:** nothing is clicked while you use it. A **Shop paused** card counts down 5 seconds once the mouse is still, with a checklist (**Mouse moved, resuming in N**, **Keep the Secret Shop open**, **Restarting**) that turns green step by step. Then the bot checks the shop and starts again from the top. It also works in the mini view.
 - **No jumping mouse:** during a run the cursor stays parked on the game window instead of jumping back after every click, and goes back to where you left it when the run stops.
 - **Mini view:** a glassy, always-on-top overlay with live counters and one big **Start / Stop**.
 - **Fast mode** and **Instant cursor** for speed once everything works.
@@ -65,10 +65,12 @@ Get the latest **`ShopRefresh-vX.Y.exe`** from the [Releases page](https://githu
 Each release lists a SHA-256 checksum, a fingerprint of the exact file that was published. To confirm your copy is genuine and complete, run this in PowerShell from the download folder and compare the result with the checksum on the release page:
 
 ```powershell
-Get-FileHash .\ShopRefresh-v1.0.2.exe -Algorithm SHA256
+Get-FileHash .\ShopRefresh-v1.0.3.exe -Algorithm SHA256
 ```
 
-You can also run `ShopRefresh-v1.0.2.exe --self-test`, which checks the app without touching the game and writes `selftest.txt` ending in `PASS`.
+You can also run `ShopRefresh-v1.0.3.exe --self-test`, which checks the app without touching the game and writes `selftest.txt` ending in `PASS`.
+
+From version 1.0.3, releases are also **signed**. Each exe has a small `.sig` file next to it, containing an Ed25519 signature over its version, file name, size and SHA-256. One-click updates check that signature with a key built into the app, and won't install anything without a valid one.
 
 ## Updating
 
