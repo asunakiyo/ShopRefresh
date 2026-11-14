@@ -23,6 +23,8 @@ This repository hosts the official Windows releases. **[Download the latest vers
 ### You stay in control
 - **Auto-stop limits:** set a gold floor and a skystone floor (defaults 1,000,000 and 1,000) and the run stops before you drop below them.
 - **F8 emergency stop**, even while the game has focus.
+- **Pauses when you move the mouse:** nothing is clicked while you use it. A **Shop paused** card counts down 5 seconds once the mouse is still, then the bot checks the shop and starts again from the top. It also works in the mini view.
+- **No jumping mouse:** during a run the cursor stays parked on the game window instead of jumping back after every click, and goes back to where you left it when the run stops.
 - **Mini view:** a glassy, always-on-top overlay with live counters and one big **Start / Stop**.
 - **Fast mode** and **Instant cursor** for speed once everything works.
 
@@ -30,7 +32,7 @@ This repository hosts the official Windows releases. **[Download the latest vers
 - **Live Run tab:** refreshes, Covenant Bookmarks, Mystic Medals, skystones spent and gold spent, with your luck colour-coded against the official Secret Shop rates.
 - **Lifetime stats and run history** (your last 500 runs), with luck shown as got vs expected.
 - **Stats tab with charts:** luck over time, refreshes per run, and streaks and records (longest droughts, luckiest and toughest runs, lucky streaks, biggest run).
-- **Session summary** when a run ends, which you can copy or save as an image.
+- **Session summary** when a run ends, which you can copy or save as an image. For short runs (under 50 refreshes) you can choose whether the run counts toward your lifetime stats.
 - **Friendly activity log** in plain words, such as "Nice! 5 Bookmarks bought". The technical detail goes to a separate debug log.
 
 ### Safe and polished
@@ -63,10 +65,10 @@ Get the latest **`ShopRefresh-vX.Y.exe`** from the [Releases page](https://githu
 Each release lists a SHA-256 checksum, a fingerprint of the exact file that was published. To confirm your copy is genuine and complete, run this in PowerShell from the download folder and compare the result with the checksum on the release page:
 
 ```powershell
-Get-FileHash .\ShopRefresh-v1.0.1.exe -Algorithm SHA256
+Get-FileHash .\ShopRefresh-v1.0.2.exe -Algorithm SHA256
 ```
 
-You can also run `ShopRefresh-v1.0.1.exe --self-test`, which checks the app without touching the game and writes `selftest.txt` ending in `PASS`.
+You can also run `ShopRefresh-v1.0.2.exe --self-test`, which checks the app without touching the game and writes `selftest.txt` ending in `PASS`.
 
 ## Updating
 
